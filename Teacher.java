@@ -64,7 +64,7 @@ public class Teacher extends Employee {
     }
     
     
-    public HashSet<Student> viewStudents() { // use LINQ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    public HashSet<Student> viewStudents() {
     	HashSet<Student> students = new HashSet<Student>();
     	this.courses.stream()
     			.forEach(c->c.getStudents().stream().

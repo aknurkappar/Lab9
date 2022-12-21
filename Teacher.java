@@ -165,3 +165,21 @@ public class Teacher extends Employee {
     	return newTeacher;
     }
 }
+
+
+
+
+
+    public boolean registerCourse(Course course) {
+    	if (Manager.approveCourseRegistration(this, course) 
+    			&& Database.registrationCourses.contains(course)
+    			&& computeCreditsForThisSemester() <= 21) {
+    		this.coursesMarks.put(course, new Mark());
+    		return true;
+    	}
+    	return false;
+    }
+    
+
+
+
